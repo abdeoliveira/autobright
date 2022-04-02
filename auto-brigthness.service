@@ -1,0 +1,13 @@
+[Unit]
+Description=Adjust brightness automatically upon resume
+After=suspend.target
+
+[Service]
+User=root
+Type=oneshot
+ExecStart=/home/oliveira/.local/config/autobrightness/autobright.rb
+TimeoutSec=5
+StandardOutput=syslog
+
+[Install]
+WantedBy=suspend.target
