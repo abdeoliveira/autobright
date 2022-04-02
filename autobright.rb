@@ -1,5 +1,5 @@
 #!/bin/ruby
-path='/home/oliveira/.local/config/autobrightness'
+path=`pwd`.delete"\n"
 require "#{path}/measure"
 
 #=========================
