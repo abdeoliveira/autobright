@@ -1,7 +1,11 @@
 # autobright
 Homemade automatic screen brightness adjustment for notebooks with webcam
 
-It uses notebook's webcam to take a picture, and then measures the resulting image's white pixels intensity. This can be correlated with ambient luminosity to adjust notebook's screen brightness. If you wish, you can start a service for adjusting brightness upon resume from suspend (check the .service file which comes with the repo).
+It uses notebook's webcam to take a picture, and then measures the resulting image's white pixels intensity. This can be correlated with ambient luminosity to adjust notebook's screen brightness and also toogle on/off keyboard's led. 
+
+If you wish, you can start a service for adjusting brightness upon resume from suspend (check the .service file which comes with the repo).
+
+Last but not least, you can crontab this script to periodically adjust your screen brightness as well. 
 
 # Dependencies
 
