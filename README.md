@@ -53,6 +53,6 @@ Device 'platform::micmute' of class 'leds':
 
 where my screen backlight is 'intel_backlight' and keyboard is 'dell::kbd_backlight'. Once you have discovered both devices, put them into *autobright.rb*. If keyboard backlight is not present, just comment the corresponding line in *autobright.rb* (look for an annotation).
 
-You will also need to tweak *log_file* and *snapshot_file* in order to meet your needs.
+You will also need to tweak the *log_file* and *snapshot_file* variables in order to meet your needs.
 
 You may now clone the repo, and make autobright executable (chmod +x autobright.rb). Just run it as **./autobright.rb**.
