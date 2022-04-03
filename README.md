@@ -51,6 +51,6 @@ Device 'platform::micmute' of class 'leds':
   
   -----
 
-where my screen backlight is 'intel_backlight' and keyboard is 'dell::kbd_backlight'. Once you have discovered both devices, put them into "adjust.sh". If keyboard backlight is not present, just comment such a line in "adjust.sh".
+where my screen backlight is 'intel_backlight' and keyboard is 'dell::kbd_backlight'. Once you have discovered both devices, put them into *autobright.rb*. If keyboard backlight is not present, just comment the corresponding line in *autobright.rb*.
 
-You may now clone the repo, do **chmod +x adjust.sh autobright.rb selfie.sh**, and finnally **./autobright.rb**.
+You may now clone the repo, and make autobright executable (chmod +x autobright.rb). Just run it as **./autobright.rb**.
