@@ -34,7 +34,7 @@ end
 keyboard=0
 #====IS IT DAY OR NIGHT?==
 h = Time.now.hour
-if h > 18 or h < 5 then 
+if h > 18 or h < 5 
   b = 30
 else
   b = 5
