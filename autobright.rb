@@ -40,7 +40,7 @@ else
   b = 5
 end
 #==TAKE A SELFIE==========
-`fswebcam --set 'Backlight Compensation'=1 --set Brightness=#{b}% #{snapshot_file}`
+`fswebcam #{snapshot_file}`
 snap = MEASURE.new(snapshot_file)
 webcam = (snap.white*100).round
 #======SOME TUNINGS=======
