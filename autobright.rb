@@ -43,7 +43,7 @@ if webcam < 10 then keyboard = 50 end
 `sudo brightnessctl -d 'intel_backlight' set #{screen}%`
 `sudo brightnessctl -d 'dell::kbd_backlight' set #{keyboard}%` # IF YOUR KEYBOAD IS NOT RETROILLUMINATED, JUST COMMENT THIS LINE.
 #==========================
-puts output = "Measured: #{webcam}\nAdjusted: #{screen}\nWebcam: #{b}\n" 
+puts output = "Measured: #{webcam}\nAdjusted: #{screen}\n" 
 File.write(log_file,output,mode:'w')
 #==========================
 
