@@ -31,19 +31,11 @@ class MEASURE
   end
 end
 #=========================================
-keyboard=0
-#====IS IT DAY OR NIGHT?==
-h = Time.now.hour
-if h > 18 or h < 5 
-  b = 30
-else
-  b = 5
-end
-#==TAKE A SELFIE==========
 `fswebcam #{snapshot_file}`
 snap = MEASURE.new(snapshot_file)
 webcam = (snap.white*100).round
 #======SOME TUNINGS=======
+keyboard=0
 screen = webcam
 if webcam == 0 then screen = 1 end
 if webcam < 10 then keyboard = 50 end
