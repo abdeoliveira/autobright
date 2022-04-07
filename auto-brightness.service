@@ -1,0 +1,14 @@
+[Unit]
+Description=Adjust brightness automatically upon resume
+After=suspend.target
+
+[Service]
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+User=oliveira
+Type=oneshot
+ExecStart=/home/oliveira/.local/config/autobrightness/autobright.rb
+TimeoutSec=5
+StandardOutput=syslog
+
+[Install]
+WantedBy=suspend.target 
