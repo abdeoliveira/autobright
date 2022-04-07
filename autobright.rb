@@ -9,7 +9,7 @@ class MEASURE
 #------------IMPORT RAW IMAGE-------------
     image = MiniMagick::Image.open(file)
     pixels = image.get_pixels
-#--TAKE A SNAPSHOT AND AVERAGE BRIGHTNESS---
+#----------AVERAGE BRIGHTNESS-------------
     count = 0
     white = 0
     image.height.times do |l|
@@ -30,7 +30,7 @@ class MEASURE
 #----------------------------------------
   end
 end
-#=========================================
+#====TAKE A SNAPSHOT======
 `fswebcam #{snapshot_file}`
 snap = MEASURE.new(snapshot_file)
 webcam = (snap.white*100).round
