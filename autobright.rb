@@ -1,8 +1,8 @@
 #!/bin/ruby
 require 'mini_magick'
 #==========================================
-log_file='/home/oliveira/.autobright.log'
-snapshot_file='/home/oliveira/.selfie_autobright.jpg'
+log_file='/tmp/autobright.log'
+snapshot_file='/tmp/selfie_autobright.jpg'
 #==========================================
 class MEASURE
   def initialize(file)
