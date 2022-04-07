@@ -36,9 +36,6 @@ end
 keyboard=0
 #==TAKE A SELFIE==========
 `fswebcam #{snapshot_file}`
-#`fswebcam --set 'Backlight Compensation'=1 --set Brightness=10% #{snapshot_file}`
-#===RESET WEBCAM SETTINGS=
-#`fswebcam --set 'Backlight Compensation'=3 --set Brightness=50%`
 #=========================
 snap = MEASURE.new(snapshot_file)
 webcam = (snap.white*100).round
@@ -53,10 +50,10 @@ b = y1 - a*x1
 h = Time.now.hour
 #-------------
 if h > 18 or h < 5
-  `gsettings set org.cinnamon.desktop.interface gtk-theme Mint-Y-Dark`
+  `gsettings set org.cinnamon.desktop.interface gtk-theme Mint-Y-Dark` #AUTOMATIC DARK MODE FOR CINNAMON DE AT NIGHT
   screen = (0.75*webcam).round(1)
 else
-  `gsettings set org.cinnamon.desktop.interface gtk-theme Mint-Y`
+  `gsettings set org.cinnamon.desktop.interface gtk-theme Mint-Y`#BACK TO LIGHT THEME DURING DAYLIGHT (CINNAMON DE ONLY)
  if webcam > x2
    screen = 100
  elsif webcam > x1 and webcam <= x2
