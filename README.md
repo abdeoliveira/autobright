@@ -11,7 +11,7 @@ Last but not least, you can crontab this script to periodically adjust your scre
 
 sudo apt install brightnessctl ruby fswebcam
 
-sudo gem install mini_magick
+gem install mini_magick
 
 # Instalation
 
