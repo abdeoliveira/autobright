@@ -15,10 +15,9 @@ gem install mini_magick
 
 # Instalation
 
-First you need to discover your *devices*. For doing that cast **brightnessctl -l**. For example, mine are
+First you need to discover your `devices`. For doing that cast `brightnessctl -l`. For example, mine are
 
------
-
+```
 Available devices:
 
 Device 'intel_backlight' of class 'backlight':
@@ -48,11 +47,10 @@ Device 'dell::kbd_backlight' of class 'leds':
 Device 'platform::micmute' of class 'leds':
 	Current brightness: 0 (0%)
 	Max brightness: 1
-  
-  -----
+```
 
-where my screen backlight is 'intel_backlight' and keyboard is 'dell::kbd_backlight'. Once you have discovered both devices, put them into *autobright.rb*. If keyboard backlight is not present, just comment the corresponding line in *autobright.rb* (look for an annotation).
+where my screen backlight is `intel_backlight` and keyboard is `dell::kbd_backlight`. Once you have discovered both devices, put them into `autobright.rb`. If keyboard backlight is not present, just comment the corresponding line in `autobright.rb` (look for an annotation).
 
-You will also need to tweak the *log_file* and *snapshot_file* variables in order to meet your needs.
+You will also need to tweak the `log_file` and `snapshot_file` variables in order to meet your needs.
 
-You may now clone the repo, and make autobright executable (chmod +x autobright.rb). Just run it as **./autobright.rb**.
+You may now clone the repo, and make autobright executable (`chmod +x autobright.rb`). Just run it as `./autobright.rb`.
